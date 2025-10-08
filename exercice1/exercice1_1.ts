@@ -15,7 +15,6 @@ const eagle: BirdType = {
   canFly: true,
 };
 
-
 type DogType = BirdType & { race: string, age: number }
 
 const germanShepherd: DogType = {
