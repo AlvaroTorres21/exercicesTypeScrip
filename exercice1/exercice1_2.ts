@@ -26,7 +26,7 @@ const bulldog: DogInterface = {
   canEat: true,
   canDrink: true,
   canSleep: true,
-  canFly: false, // Los perros no pueden volar
+  canFly: false,
   race: "Bulldog",
   age: 4,
 };
