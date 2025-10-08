@@ -15,14 +15,14 @@ const eagle: BirdType = {
   canFly: true,
 };
 
-type DogType = BirdType & { race: string, age: number }
+type DogType = BirdType & { race: "Husky" | "Labrador" | "Chucho", age: number }
 
-const germanShepherd: DogType = {
-  name: "German Shepherd",
+const Husky: DogType = {
+  name: "Kira",
   canEat: true,
   canDrink: true,
   canSleep: true,
-  canFly: false, // Los perros no pueden volar
-  race: "German Shepherd",
+  canFly: false, 
+  race: "Husky",
   age: 5,
 };

@@ -1,28 +1,33 @@
 
-type BirdType = {
+interface BirdInterface {
   name: string;
   canEat: boolean;
   canDrink: boolean;
   canSleep: boolean;
   canFly: boolean;
-};
+}
 
-const eagle: BirdType = {
-  name: "Eagle",
+const sparrow: BirdInterface = {
+  name: "Sparrow",
   canEat: true,
   canDrink: true,
   canSleep: true,
   canFly: true,
 };
 
-type DogType = BirdType & { race: string, age: number }
 
-const germanShepherd: DogType = {
-  name: "German Shepherd",
+interface DogInterface extends BirdInterface {
+    race: string;
+    age: number;
+}
+
+const bulldog: DogInterface = {
+  name: "Bulldog",
   canEat: true,
   canDrink: true,
   canSleep: true,
   canFly: false, // Los perros no pueden volar
-  race: "German Shepherd",
-  age: 5,
+  race: "Bulldog",
+  age: 4,
 };
+
