@@ -1,31 +1,4 @@
-
-type BirdType = {
-  name: string;
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-  canFly: boolean;
-};
-
-const eagle: BirdType = {
-  name: "Eagle",
-  canEat: true,
-  canDrink: true,
-  canSleep: true,
-  canFly: true,
-};
-
-type DogType = BirdType & { race: "Husky" | "Labrador" | "Chucho", age: number }
-
-const Husky: DogType = {
-  name: "Kira",
-  canEat: true,
-  canDrink: true,
-  canSleep: true,
-  canFly: false, 
-  race: "Husky",
-  age: 5,
-};
+import { BirdType } from "../exercice1/exercice1_1";
 
 type CatType = Pick<BirdType, "name" | "canSleep"> & {
     color: string;
@@ -44,4 +17,3 @@ const cobra: SnakeType = {
   canDrink: true,
   canSleep: true,
 };
-
