@@ -1,5 +1,5 @@
 
-interface BirdInterface {
+export interface BirdInterface {
   name: string;
   canEat: boolean;
   canDrink: boolean;
@@ -26,7 +26,7 @@ const bulldog: DogInterface = {
   canEat: true,
   canDrink: true,
   canSleep: true,
-  canFly: false,
+  canFly: false, 
   race: "Bulldog",
   age: 4,
 };
