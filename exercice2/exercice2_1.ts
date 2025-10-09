@@ -1,28 +1,17 @@
 
-type BirdType = {
-  name: string;
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-  canFly: boolean;
-};
+import { BirdType, DogType } from "../exercice1/exercice1_1";
 
-const eagle: BirdType = {
-  name: "Eagle",
-  canEat: true,
-  canDrink: true,
-  canSleep: true,
-  canFly: true,
-};
+type AllowedRaces = "Husky" | "Labrador" | "Chucho";
 
-type DogType = BirdType & { race: "Husky" | "Labrador" | "Chucho", age: number }
+type allowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRaces };
 
-const Husky: DogType = {
+const Husky: allowedDogBreeds = {
   name: "Kira",
   canEat: true,
   canDrink: true,
   canSleep: true,
-  canFly: false, 
-  race: "Husky",
+  canFly: false,
+  race: "Husky", 
   age: 5,
 };
+
