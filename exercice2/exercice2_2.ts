@@ -1,25 +1,14 @@
-interface BirdInterface {
-  name: string;
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-  canFly: boolean;
-}
+import { BirdInterface } from "../exercice1/exercice1_2";
 
-const sparrow: BirdInterface = {
-  name: "Sparrow",
-  canEat: true,
-  canDrink: true,
-  canSleep: true,
-  canFly: true,
+type AllowedRacesInterfaces = "Husky" | "Labrador" | "Chucho";
+
+type RestrictedDogInterface = Omit<BirdInterface, "canFly"> & {
+  canFly: false;
+  race: AllowedRacesInterfaces;
+  age: number;
 };
 
-interface DogInterface extends BirdInterface {
-  race: "Husky" | "Labrador" | "Chucho";
-  age: number;
-}
-
-const Labrador: DogInterface = {
+const Labrador: RestrictedDogInterface = {
   name: "Toby",
   canEat: true,
   canDrink: true,
