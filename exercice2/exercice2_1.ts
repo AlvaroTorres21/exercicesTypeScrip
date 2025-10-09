@@ -5,7 +5,7 @@ type AllowedRacesType = "Husky" | "Labrador" | "Chucho";
 
 type AllowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRacesType };
 
-const Husky: allowedDogBreeds = {
+const Husky: AllowedDogBreeds = {
   name: "Kira",
   canEat: true,
   canDrink: true,
