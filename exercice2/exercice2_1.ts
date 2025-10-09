@@ -1,9 +1,9 @@
 
 import { BirdType, DogType } from "../exercice1/exercice1_1";
 
-type AllowedRaces = "Husky" | "Labrador" | "Chucho";
+type AllowedRacesType = "Husky" | "Labrador" | "Chucho";
 
-type allowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRaces };
+type allowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRacesType };
 
 const Husky: allowedDogBreeds = {
   name: "Kira",
@@ -14,4 +14,3 @@ const Husky: allowedDogBreeds = {
   race: "Husky", 
   age: 5,
 };
-
