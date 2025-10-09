@@ -1,5 +1,5 @@
 
-type BirdType = {
+export type BirdType = {
   name: string;
   canEat: boolean;
   canDrink: boolean;
@@ -15,7 +15,7 @@ const eagle: BirdType = {
   canFly: true,
 };
 
-type DogType = BirdType & { race: string, age: number }
+export type DogType = BirdType & { race: string, age: number }
 
 const germanShepherd: DogType = {
   name: "German Shepherd",
@@ -26,3 +26,4 @@ const germanShepherd: DogType = {
   race: "German Shepherd",
   age: 5,
 };
+
