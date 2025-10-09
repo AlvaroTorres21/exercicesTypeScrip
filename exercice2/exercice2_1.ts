@@ -3,7 +3,7 @@ import { BirdType, DogType } from "../exercice1/exercice1_1";
 
 type AllowedRacesType = "Husky" | "Labrador" | "Chucho";
 
-type allowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRacesType };
+type AllowedDogBreeds = Omit<DogType, "race"> & { race: AllowedRacesType };
 
 const Husky: allowedDogBreeds = {
   name: "Kira",
